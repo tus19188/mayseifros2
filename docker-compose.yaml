@@ -1,0 +1,12 @@
+
+version: "3"
+services: 
+  my_image:
+    build: 
+        context: ./
+    image: bionic-bai:latest
+  echoserver:
+    image: bionic-bai:latest
+    command: python3 -u echo-server.py
+    ports:
+      - "5001:5001"
